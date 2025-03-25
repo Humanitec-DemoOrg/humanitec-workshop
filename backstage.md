@@ -5,7 +5,7 @@ Context: You are a Developer and you want to onboard a new Project in the Platfo
 Objectives:
 - From your Developer Portal, you will onboard a new project based on well supported templates.
 
-Go to https://collinsstoltenbergmckenziewatsica.workshop-kubecon-london.newapp.io/.
+Go to https://collinsstoltenbergmckenziewatsica.workshop-kubecon-london.newapp.io/. Enter as a Guest user.
 
 ![alt text](images/image-1.png)
 
