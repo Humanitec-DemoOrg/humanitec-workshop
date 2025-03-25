@@ -1,6 +1,5 @@
+# Bring your own OpenTofu modules
 
+FIXME - more to come, stay tuned.
 
-
-Review redis in cluster
-Review memorystore with opentofu
-Add gcs with Workload Identity
+[<< Previous: Review of the Platform setup](platform.md) |

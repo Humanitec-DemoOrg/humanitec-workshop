@@ -14,7 +14,9 @@ Here is a zoom on this part of the setup:
 ```mermaid
 flowchart LR
   direction LR
-  k8s-cluster-.->agent
+  subgraph Humanitec
+    k8s-cluster-.->agent
+  end
   subgraph Cloud
     subgraph Kubernetes
       agent-.->operator
@@ -56,3 +58,5 @@ Last but not least, let's illustrate the notion of "Version" and "Usage" of a re
 ```bash
 echo -e "https://app.humanitec.io/orgs/workshop-kubecon-london/resources/definitions/workshop-kubecon-london/usage"
 ```
+
+| [Next: Bring your own OpenTofu modules >>](opentofu.md)
