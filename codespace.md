@@ -2,6 +2,7 @@
 
 Prerequisites:
 - You need a GitHub account.
+- You need to be logged in to your Humanitec Organization at [https://app.humanitec.io/](https://app.humanitec.io/)
 
 Context: FIXME
 
@@ -44,6 +45,8 @@ CONTAINER_NAME=$(yq '.containers | keys[0]' score.yaml)
 
 score-compose generate score.yaml --build "${CONTAINER_NAME}={\"context\":\".\",\"tags\":[\"${CONTAINER_NAME}:test\"]}"
 ```
+
+A `compose.yaml` file has now been created.
 
 Run the Workload locally:
 ```bash
@@ -108,11 +111,11 @@ humctl get envs
 humctl get active-resources
 ```
 
-n VS Code, run the `> Humanitec: Display resource graph` command in the VS Code search bar at the top (`Ctrl` + `Shift` + `P`).
+In VS Code, run the `> Humanitec: Display resource graph` command in the VS Code search bar at the top (`Ctrl` + `Shift` + `P`).
 
 ![alt text](images/image-12.png)
 
-You can also run the following command to get the URL of the resource graph of the latest deployment, to open it in a new tab in your web browser:
+You can also run the following command to get the URL of the resource graph of the latest deployment. `Ctrl`+ dlick the link shown in the console to open it in a new tab in your web browser:
 ```bash
 humctl resources graph deploy .
 ```
