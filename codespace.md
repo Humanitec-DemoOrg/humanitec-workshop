@@ -91,9 +91,14 @@ Once selected you should now see the `Available resources` view populated:
 
 Let's illustrate what does that mean:
 - Where does this `Development` environment come from?
-- Whare are these `Available resources`?
+- What are these `Available resources`?
 
 In VS Code, run the `> Humanitec: Open configured terminal` command in the VS Code search bar at the top (`Ctrl` + `Shift` + `P`). And run the following commands in this terminal.
+
+```bash
+humctl config
+```
+To show the current context.
 
 ```bash
 humctl score validate score.yaml
@@ -115,7 +120,7 @@ In VS Code, run the `> Humanitec: Display resource graph` command in the VS Code
 
 ![alt text](images/image-12.png)
 
-You can also run the following command to get the URL of the resource graph of the latest deployment. `Ctrl`+ dlick the link shown in the console to open it in a new tab in your web browser:
+You can also run the following command to get the URL of the resource graph of the latest deployment. `Ctrl`+ click the link shown in the console to open it in a new tab in your web browser:
 ```bash
 humctl resources graph deploy .
 ```
