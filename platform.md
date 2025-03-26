@@ -15,13 +15,17 @@ Here is a zoom on this part of the setup:
 flowchart LR
   direction LR
   subgraph Humanitec
-    k8s-cluster-.->agent
+    k8s-cluster[k8s-cluster<br/>Resource Definition]-.->agent[agent<br/>Resource Definition]
   end
   subgraph Cloud
+    direction LR
+    agent-instance[agent]
     subgraph Kubernetes
-      agent-.->operator
+      direction LR
+      operator[Operator]
     end
-    operator-->secret-manager
+    agent-.->agent-instance-.->operator
+    operator-->secret-manager[Secret manager]
   end
 ```
 
