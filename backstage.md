@@ -17,6 +17,8 @@ Select one of the 2 templates, by clicking on `Choose`.
 
 Provide a `Name`.
 
+FIXME - highlight the unicity of this name!!!!!!
+
 ![alt text](images/image-3.png)
 
 Click on `Review` and then `Create`.
