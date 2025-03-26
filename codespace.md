@@ -91,7 +91,7 @@ Once selected you should now see the `Available resources` view populated:
 
 Let's illustrate what does that mean:
 - Where does this `Development` environment come from?
-- Whare are these `Available resources`?
+- What are these `Available resources`?
 
 In VS Code, run the `> Humanitec: Open configured terminal` command in the VS Code search bar at the top (`Ctrl` + `Shift` + `P`). And run the following commands in this terminal.
 
