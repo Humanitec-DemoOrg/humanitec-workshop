@@ -62,7 +62,15 @@ Commit your local changes in this `new-feature` branch:
 ```bash
 git add score.yaml
 git commit -m "Add Redis database"
+```
+
+Reply `y` to create a fork in your own GitHub account.
+
+Then continue to push your change into the fork:
+
+```
 git push -u origin new-feature
+gh repo set-default htc-workshop-kubecon-london/$(basename `git rev-parse --show-toplevel`)
 ```
 
 Create a dedicated Pull Request in GitHub:
