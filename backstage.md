@@ -18,9 +18,9 @@ Click on `Create` in the top right corner.
 
 Select one of the 2 templates, by clicking on `Choose` on one of them.
 
-Provide a `Name`.
-
 _Important note: please make this name unique (otherwise you'll get an error)._
+
+Provide a `Name`.
 
 ![alt text](images/image-3.png)
 
