@@ -1,8 +1,12 @@
 # Test a feature request
 
+Prerequisites:
+- You need to have successfully done the previous section [Set up your local environment](codespace.md)
+- You need to have the Codespace created
+
 Objectives:
 - [Deploy manually a new deployment in a new environment](#deploy-manually-a-new-deployment-in-a-new-environment)
-- [Create an Ephemeral Environment via a Pull Request](#create-an-ephemeral-environment-via-a-pull-request)
+- [(Just a demo) See how an Ephemeral Environment can be created via a Pull Request](#create-an-ephemeral-environment-via-a-pull-request)
 
 ## Deploy manually a new deployment in a new environment
 
@@ -51,7 +55,9 @@ humctl resources graph deploy . --env test
 
 ![alt text](images/image-14.png)
 
-## Create an Ephemeral Environment via a Pull Request
+## (Just a demo) See how an Ephemeral Environment can be created via a Pull Request
+
+_Important note: this section is just a demo, please see what your presenter is doing to illustrate this. You are not able to perform this specific section because you are not `Owner` in the GitHub Organization used during this workshop._
 
 Create a `new-feature` branch:
 ```bash
@@ -86,4 +92,4 @@ gh pr view --web
 
 From there, let's highlight what happened, and what the associated GitHub Actions pipeline did.
 
-[<< Previous: Set up your local environment](codespace.md) |
+[<< Previous: Set up your local environment](codespace.md) | [Next: Review of the Platform setup >>](platform.md)

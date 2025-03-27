@@ -1,5 +1,8 @@
 # Onboard a new project from Backstage
 
+Prerequesites:
+- You need a web browser.
+
 Context: You are a Developer and you want to onboard a new Project in the Platform based on available templates.
 
 Objectives:
@@ -13,11 +16,11 @@ Click on `Create` in the top right corner.
 
 ![alt text](images/image-2.png)
 
-Select one of the 2 templates, by clicking on `Choose`.
+Select one of the 2 templates, by clicking on `Choose` on one of them.
 
 Provide a `Name`.
 
-FIXME - highlight the unicity of this name!!!!!!
+_Important note: please make this name unique (otherwise you'll get an error)._
 
 ![alt text](images/image-3.png)
 

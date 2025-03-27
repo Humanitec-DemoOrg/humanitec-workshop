@@ -1,10 +1,16 @@
 # Review of the Platform setup
 
+Prerequisites:
+- You need to have successfully done the previous section [Test a feature request](pr.md)
+- You need to be logged in to your Humanitec Organization at [https://app.humanitec.io/](https://app.humanitec.io/)
+
 Objectives:
-- Review the reference architecture
-- Understand what is a resource definition
-- Illustrate some resource definition examples
-- Manage Version and Usage of the resource definitions
+- [Review the reference architecture](#review-the-reference-architecture)
+- [Understand what is a resource definition](#understand-what-is-a-resource-definition)
+- [Illustrate some resource definition examples](#illustrate-some-resource-definition-examples)
+- [Manage Versions and Usage of the resource definitions](#manage-versions-and-usage-of-the-resource-definitions)
+
+## Review the reference architecture
 
 ![alt text](images/image-13.png)
 
@@ -29,6 +35,8 @@ flowchart LR
   end
 ```
 
+## Understand what is a resource definition
+
 Let's look at the resource definition of type `k8s-cluster`:
 ```bash
 humctl get res-defs workshop-kubecon-london -o yaml
@@ -46,6 +54,8 @@ Let's highlight the differences between "explicit" versus "implicit" resources o
 echo -e "https://app.humanitec.io/orgs/workshop-kubecon-london/apps/mabenoit-podinfo/envs/development/status"
 ```
 
+## Illustrate some resource definition examples
+
 Let's now open the resource definition of type `k8s-namespace` to see how you can enforce some `annotations` or `labels` with any Kubernetes `Namespace` created via the Platform:
 ```bash
 humctl get res-defs secure-namespace -o yaml
@@ -58,9 +68,11 @@ Let's now open the resource definition of type `workload` to see how you can enf
 humctl get res-defs custom-workload -o yaml
 ```
 
+## Manage Versions and Usage of the resource definitions
+
 Last but not least, let's illustrate the notion of "Version" and "Usage" of a resource definition. Let's open the `k8s-cluster` resource definition:
 ```bash
 echo -e "https://app.humanitec.io/orgs/workshop-kubecon-london/resources/definitions/workshop-kubecon-london/usage"
 ```
 
-| [Next: Bring your own OpenTofu modules >>](opentofu.md)
+[<< Previous: Test a feature request](pr.md) | [Next: Bring your own OpenTofu modules >>](opentofu.md)
