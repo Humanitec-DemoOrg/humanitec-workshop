@@ -16,7 +16,7 @@ Here is a zoom on this part of the setup:
 flowchart LR
   direction LR
   subgraph Humanitec
-    cloud-account[Cloud Account]-.->redis-res-def[redis<br/>Resource Definition]
+    redis-res-def[redis<br/>Resource Definition]-.->cloud-account[Cloud Account]
   end
   subgraph Cloud
     direction LR
@@ -25,6 +25,7 @@ flowchart LR
       direction LR
       operator[Operator]-->tf-runner[OpenTofu Runner]
     end
+    cloud-account-->gcp-identity[Workload Identity Federation]
     redis-res-def-.->agent-instance-->operator
     tf-runner-->redis[Memorystore Redis]
   end
