@@ -25,7 +25,7 @@ flowchart LR
       direction LR
       operator[Operator]-->tf-runner[OpenTofu Runner]
     end
-    redis-res-def-.->agent-->operator
+    redis-res-def-.->agent-instance-->operator
     tf-runner-->redis[Memorystore Redis]
   end
 ```
