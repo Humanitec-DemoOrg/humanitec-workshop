@@ -27,7 +27,7 @@ flowchart LR
     end
     redis-res-def-.->operator
     operator-->tf-runner
-    tf-runner-->redis[Memorystore (Redis)]
+    tf-runner-->redis[Memorystore Redis]
   end
 ```
 
