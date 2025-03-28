@@ -1,10 +1,35 @@
 # Bring your own OpenTofu modules
 
 Objectives:
+- [Review the architecture](#review-the-architecture)
 - [Add `gcs` with Workload Identity in Production](#add-gcs-with-workload-identity-in-production)
 - [Review the in-cluster `redis` resource in Test](#review-the-in-cluster-redis-resource-in-test)
 - [Review the `redis` (Memorystore via OpenTofu) resource in Production](#review-the-redis-memorystore-via-opentofu-resource-in-production)
 - [Review the `gcs` (via OpenTofu) with Workload Identity in Production](#review-the-gcs-via-opentofu-with-workload-identity-in-production)
+
+## Review the architecture
+
+As Platform Engineer, you were able to setup access to Google Cloud to support the deployments of infrastructure dependencies on behalf of the Developers. It was done for you prior to this workshop.
+
+Here is a zoom on this part of the setup:
+```mermaid
+flowchart LR
+  direction LR
+  subgraph Humanitec
+    cloud-account[Cloud Account]-.->redis-res-def[redis<br/>Resource Definition]
+  end
+  subgraph Cloud
+    direction LR
+    agent-instance[agent]
+    subgraph Kubernetes
+      direction LR
+      operator[Operator]-->tf-runner[OpenTofu Runner]
+    end
+    redis-res-def-.->operator
+    operator-->tf-runner
+    tf-runner-->redis[Memorystore (Redis)]
+  end
+```
 
 ## Add `gcs` with Workload Identity in Production
 
@@ -84,6 +109,18 @@ humctl get res-def redis-memorystore-existing -o yaml
 
 ## Review the `gcs` (via OpenTofu) with Workload Identity in Production
 
-FIXME
+On the previous graph opened, select the `gcs` node and check the details information and dependencies. What do you see?
+
+See the associated resource definition configuration:
+```bash
+humctl get res-def gcs -o yaml
+```
+
+We could see that this `gcs` resource co-provisions an associated `gcp-iam-policy-binding`, this is to automatically inject GKE Workload Identity.
+
+See the associated resource definition configuration:
+```bash
+humctl get res-def gcs-member -o yaml
+```
 
 [<< Previous: Review of the Platform setup](platform.md)
