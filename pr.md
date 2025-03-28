@@ -38,7 +38,7 @@ resources:
 
 Let's deploy this new version of the Score file with an existing container image:
 ```bash
-CONTAINER_IMAGE=northamerica-northeast1-docker.pkg.dev/kubecon-london-workshop/kclondon/mabenoit-podinfo:ffd2bc0
+CONTAINER_IMAGE=$(humctl get deployment-set . -o yaml | yq '.entity.modules[].spec.containers[].image')
 
 humctl score deploy -f score.yaml --env test --image ${CONTAINER_IMAGE} --wait
 ```
