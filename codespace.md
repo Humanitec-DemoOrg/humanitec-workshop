@@ -129,4 +129,8 @@ You can also run the following command to get the URL of the resource graph of t
 humctl resources graph deploy .
 ```
 
+Let's also have a look at the Backstage portal where we can now see the new `test` Environment created.
+
+![alt text](images/image-12-1.png)
+
 [<< Previous: Onboard a new project from Backstage](backstage.md) | [Next: Test a feature request >>](pr.md)
